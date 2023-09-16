@@ -5,7 +5,7 @@ import Image from "next/image";
 function Gallery() {
   return (
     <Container>
-      <div className="my-20">
+      <div className="my-20" id="gallery">
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">Gallery</h1>
@@ -17,7 +17,7 @@ function Gallery() {
           <div className="flex gap-4 p-2">
             <Image
               src="https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1286&q=80"
-              width={100}
+              width={200}
               height={0}
               alt="/"
               className="rounded-md transition hover:scale-105 duration-300 ease-in  h-full w-[100px] sm:w-[150px] md:w-[200px]"
@@ -41,7 +41,7 @@ function Gallery() {
             </div>
             <Image
               src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1290&q=80"
-              width={100}
+              width={200}
               height={0}
               alt="/"
               className="rounded-md transition hover:scale-105 duration-300 ease-in h-full w-[100px] sm:w-[150px] md:w-[200px]"

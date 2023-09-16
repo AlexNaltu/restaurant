@@ -5,6 +5,8 @@ import { Lobster } from "next/font/google";
 import { BiRestaurant } from "react-icons/bi";
 import { IoRestaurantSharp } from "react-icons/io5";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 import { Cabin } from "next/font/google";
 import Hero from "../Hero";
 
@@ -12,11 +14,14 @@ const lobster = Lobster({ subsets: ["latin"], weight: "400" });
 const cabin = Cabin({ subsets: ["latin"], weight: "500" });
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [nav, SetNav] = useState(false);
 
   const handleNav = () => {
     SetNav(!nav);
   };
+
+  if (pathname.startsWith("/studio")) return null;
 
   return (
     <div className="custom-bg w-full h-[600px] bg-no-repeat bg-cover bg-center">
@@ -32,19 +37,19 @@ const Navbar = () => {
               <li>Home</li>
             </Link>
             <Link
-              href="/"
+              href="/menu"
               className="hover:text-orange-300"
             >
               <li>Menu</li>
             </Link>
             <Link
-              href="/"
+              href="#gallery"
               className="hover:text-orange-300"
             >
               <li>Gallery</li>
             </Link>
             <Link
-              href="/"
+              href="#contact"
               className="hover:text-orange-300"
             >
               <li>Contact</li>
@@ -66,13 +71,16 @@ const Navbar = () => {
           >
             <ul className={`${cabin.className} text-xl m-5 flex flex-col gap-5`}>
               <li className=" hover:text-orange-300">
-                <Link href="#">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li className=" hover:text-orange-300">
-                <Link href="/work">Work</Link>
+                <Link href="/menu">Menu</Link>
               </li>
               <li className=" hover:text-orange-300">
-                <Link href="#">Contact</Link>
+                <Link href="#gallery">Gallery</Link>
+              </li>
+              <li className=" hover:text-orange-300">
+                <Link href="#contact">Contact</Link>
               </li>
             </ul>
           </div>

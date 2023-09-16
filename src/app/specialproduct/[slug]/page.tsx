@@ -25,7 +25,7 @@ export default async function SlugPage({ params }: { params: { slug: string } })
 
   return (
     <div className="my-10 flex flex-col items-center justify-center p-5">
-      <h1 className="text-2xl lg:text-3xl xl:text-4xl text-orange-300 font-bold my-5">Today's Special</h1>
+      <h1 className="text-2xl lg:text-3xl xl:text-4xl text-orange-300 font-bold my-5">Today Special</h1>
       <div className="max-w-[400px] bg-zinc-500 py-5 px-5 rounded-sm">
         <Image
           src={urlForImage(data.images[0]).url()}
